@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: TastyBytes
+  datasource:
+    url: jdbc:mysql://localhost:3306/clickmaster
+    username: root
+    password: system
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+
+
+server:
+  port: 8088
+
