@@ -1,0 +1,247 @@
+/* Gallery Container Layout */
+.gallery-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+/* Sidebar Positioning */
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* Add your sidebar specific styles here */
+}
+
+.gallery-main {
+    flex: 1;
+    margin-left: 250px;
+    padding: 30px;
+}
+
+/* Header Styles */
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #6B48FF 0%, #00A3FF 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-header h2 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.gallery-add-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.gallery-add-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Table Styles */
+.gallery-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 1px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-table thead {
+    background-color: #6B48FF;
+    color: white;
+}
+
+.gallery-table th,
+.gallery-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.gallery-table th {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.gallery-table tbody tr {
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s ease;
+}
+
+.gallery-table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+.gallery-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+}
+
+/* Action Buttons */
+.gallery-edit-btn,
+.gallery-delete-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin: 0 5px;
+}
+
+.gallery-edit-btn {
+    background-color: #2196F3;
+    color: white;
+}
+
+.gallery-edit-btn:hover {
+    background-color: #1976D2;
+    transform: scale(1.1);
+}
+
+.gallery-delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.gallery-delete-btn:hover {
+    background-color: #d32f2f;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.gallery-modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.gallery-modal {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    width: 500px;
+    max-width: 90%;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.gallery-modal h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.gallery-form-group {
+    margin-bottom: 20px;
+}
+
+.gallery-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+}
+
+.gallery-form-group input[type="text"],
+.gallery-form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.gallery-form-group input[type="text"]:focus,
+.gallery-form-group select:focus {
+    border-color: #6B48FF;
+    outline: none;
+}
+
+.gallery-form-group input[type="file"] {
+    padding: 10px;
+    border: 2px dashed #e0e0e0;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.gallery-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.gallery-form-actions button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.gallery-form-actions button[type="submit"] {
+    background-color: #6B48FF;
+    color: white;
+}
+
+.gallery-form-actions button[type="submit"]:hover {
+    background-color: #5536d1;
+    transform: translateY(-1px);
+}
+
+.gallery-form-actions button[type="button"] {
+    background-color: #e0e0e0;
+    color: #555;
+}
+
+.gallery-form-actions button[type="button"]:hover {
+    background-color: #d0d0d0;
+}

@@ -1,0 +1,163 @@
+.admin-sidebar {
+    background-color: #1a1a1a;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 0 20px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-sidebar-logo {
+    padding: 20px;
+    background-color: #121212;
+    border-bottom: 2px solid #4CAF50;
+    flex-shrink: 0;
+  }
+  
+  .admin-logo-header .admin-navbar-brand h1 {
+    color: #fff !important;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .admin-sidebar-wrapper {
+    padding: 20px 0;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .admin-nav-secondary {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-nav-item {
+    position: relative;
+    width: 100%;
+    margin: 4px 0;
+  }
+  
+  .admin-nav-item a {
+    color: #b3b3b3;
+    text-decoration: none;
+    padding: 14px 25px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .admin-nav-item a:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    transform: none;
+  }
+  
+  .admin-nav-item a:hover::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #4CAF50;
+  }
+  
+  .admin-nav-item.admin-active a {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+    font-weight: 500;
+  }
+  
+  .admin-nav-item i {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 25px;
+    text-align: center;
+  }
+  
+  .admin-nav-section {
+    padding: 25px 25px 10px;
+    color: #666;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    margin: 15px 0 10px;
+    position: relative;
+  }
+  
+  .admin-nav-section h4 {
+    margin: 0;
+    font-weight: 600;
+  }
+  
+  .admin-nav-secondary > li:not(.admin-nav-section) {
+    margin: 2px 0;
+  }
+  
+  .admin-nav-item a p {
+    flex-grow: 1;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  
+  .admin-nav-item a:hover p {
+    transform: translateX(8px);
+  }
+  
+  .admin-nav-section::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #4CAF50;
+    margin-top: 8px;
+  }
+  
+  /* Scrollbar Styling */
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4CAF50;
+    border-radius: 10px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .admin-sidebar {
+      left: -250px;
+    }
+  
+    .admin-sidebar.admin-active {
+      left: 0;
+    }
+  }
+  
+  /* Logo hover effect */
+  .admin-logo-header:hover h1 {
+    color: #4CAF50 !important;
+    letter-spacing: 3px;
+  }
+  

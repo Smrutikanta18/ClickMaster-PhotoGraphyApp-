@@ -1,0 +1,218 @@
+/* Overall container */
+.admin-service-container {
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Main content beside sidebar */
+  .testimonial-content {
+    margin-left: 250px; /* width of sidebar */
+    padding: 30px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    width: calc(100% - 250px);
+  }
+  
+  /* Header section */
+  .testimonial-content .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .testimonial-content h2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  /* Add button */
+  .testimonial-content button {
+    padding: 10px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .testimonial-content button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Table styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  }
+  
+  thead {
+    background-color: #e9ecef;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 14px 20px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    font-weight: 600;
+  }
+  
+  tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+   
+  /* Image styling */
+  td img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Action buttons */
+  td .bg-blue-500,
+  td .bg-red-500 {
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.9rem;
+  }
+  
+  .bg-blue-500:hover {
+    background-color: #2563eb;
+  }
+  
+  .bg-red-500:hover {
+    background-color: #c53030;
+  }
+  
+  /* Modal backdrop */
+  .fixed.inset-0 {
+    z-index: 1000;
+    backdrop-filter: blur(2px);
+  }
+  
+  /* Modal card */
+  .bg-white.shadow {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  }
+  
+  /* Modal form input styles */
+  form input[type="text"],
+  form input[type="file"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+  
+  /* Modal button styling */
+  form button {
+    padding: 10px 16px;
+    font-size: 1rem;
+  }
+  
+  .bg-gray-300 {
+    background-color: #e2e8f0;
+  }
+  
+  .bg-gray-300:hover {
+    background-color: #cbd5e0;
+  }
+  
+  .bg-green-600:hover {
+    background-color: #218838;
+  }
+  
+  .bg-red-600:hover {
+    background-color: #c82333;
+  }
+  /* Testimonial Modal backdrop */
+.testimonial-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+  }
+  
+  /* Testimonial Modal container */
+  .testimonial-modal {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    animation: testimonialFadeIn 0.3s ease;
+  }
+  
+  /* Animation */
+  @keyframes testimonialFadeIn {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Header */
+  .testimonial-modal-header {
+    background: linear-gradient(135deg, #4CAF50, #45a049);
+    color: white;
+    padding: 16px 24px;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  /* Body */
+  .testimonial-modal-body {
+    padding: 24px;
+  }
+  
+  /* Footer */
+  .testimonial-modal-footer {
+    padding: 16px 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Form styles */
+  .testimonial-modal-body .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-modal-body .form-control {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 2px solid #e0e0e0;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .testimonial-modal-body .form-control:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
